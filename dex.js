@@ -3,7 +3,7 @@ async function getTop10Tokens() {
   const tokens = await reponse.json();
 
   return tokens
-    .filter((token) => token.rank >= 1 && token.rank <= 50)
+    .filter((token) => token.rank >= 1 && token.rank <= 10)
     .map((token) => token.symbol);
 }
 
